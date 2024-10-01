@@ -1,6 +1,7 @@
 from django.views.generic import (
     CreateView, ListView, UpdateView, DeleteView, DetailView
 )
+from django.urls import reverse_lazy
 
 from .forms import BirthdayForm
 from .models import Birthday
@@ -20,8 +21,8 @@ class BirthdayCreateView(BirthdayMixin, CreateView):
     pass
 
 
-class BirthdayDeleteView(DeleteView):
-    pass
+class BirthdayDeleteView(BirthdayMixin, DeleteView):
+    success_url = reverse_lazy('birthday:list')
 
 
 class BirthdayListView(ListView):
