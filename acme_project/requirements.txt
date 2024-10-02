@@ -4,7 +4,7 @@ asgiref==3.8.1
 click==8.1.7
 Django==3.2.16
 django-bootstrap5==22.2
-exceptiongroup==1.2.2
+django_debug_toolbar==3.8.1
 fastapi==0.115.0
 h11==0.14.0
 idna==3.10
