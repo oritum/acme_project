@@ -51,7 +51,7 @@ class BirthdayDeleteView(
 
 class BirthdayListView(ListView):
     model = Birthday
-    # По умолчанию этот класс 
+    # По умолчанию этот класс
     # выполняет запрос queryset = Birthday.objects.all(),
     # но мы его переопределим:
     queryset = Birthday.objects.prefetch_related(
